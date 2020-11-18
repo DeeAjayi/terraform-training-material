@@ -36,7 +36,9 @@ resource "azurerm_public_ip" "myterraformpublicip" {
     }
 }
 
-output "public_ip" { value = azurerm_public_ip.myterraformpublicip.ip_address }
+output "public_ip" { 
+    value = azurerm_public_ip.myterraformpublicip.ip_address
+    }
 
 resource "azurerm_network_security_group" "myterraformnsg" {
     name                = "myNetworkSecurityGroup"
